@@ -9,12 +9,15 @@ use Magento\Framework\App\ResponseInterface;
 /**
  * Class Forward
  */
-class Forward extends Action {
+class Forward extends Action
+{
 
-  /**
-   * @return ResponseInterface|void
-   */
-  public function execute() {
-    $this->_forward('raw','hello','first-module');
-  }
+    /**
+     * @return ResponseInterface|void
+     */
+    public function execute()
+    {
+        $this->_forward('raw', 'hello', 'first-module');
+    }
+
 }

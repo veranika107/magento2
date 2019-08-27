@@ -10,15 +10,17 @@ use Magento\Framework\Controller\ResultFactory;
 /**
  * Class Redirect
  */
-class Redirect extends Action {
+class Redirect extends Action
+{
 
-  /**
-   * @return ResultInterface
-   */
-  public function execute()
-  {
-    $resultRedirect = $this->resultFactory->create(ResultFactory::TYPE_REDIRECT);
-    $resultRedirect->setPath('first-module/hello/json');
-    return $resultRedirect;
-  }
+    /**
+     * @return ResultInterface
+     */
+    public function execute()
+    {
+        $resultRedirect = $this->resultFactory->create(ResultFactory::TYPE_REDIRECT);
+        $resultRedirect->setPath('first-module/hello/json');
+        return $resultRedirect;
+    }
+
 }

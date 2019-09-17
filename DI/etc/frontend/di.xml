@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Epam\DI\Api\FrontendServiceInterface" type="Epam\DI\Model\FrontendService" />
+    <type name="Epam\DI\Api\FrontendServiceInterface">
+        <arguments>
+            <argument name="frontendNumber" xsi:type="number">5</argument>
+            <argument name="frontendArray" xsi:type="array">
+                <item name="frontend-item1" xsi:type="string">Back Item 1 from frontend</item>
+                <item name="frontend-item2" xsi:type="string">Back Item 2 from frontend</item>
+                <item name="frontend-item3" xsi:type="string">Back Item 3 from forntend</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

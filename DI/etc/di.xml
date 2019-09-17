@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Epam\DI\Api\CustomServiceInterface" type="Epam\DI\Model\CustomService" />
+    <type name="Epam\DI\Api\CustomServiceInterface">
+        <arguments>
+            <argument name="snippetString" xsi:type="string">Backend</argument>
+            <argument name="snippetArray" xsi:type="array">
+                <item name="item1" xsi:type="string">Back Item 1</item>
+                <item name="item2" xsi:type="string">Back Item 2</item>
+                <item name="item3" xsi:type="string">Back Item 3</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

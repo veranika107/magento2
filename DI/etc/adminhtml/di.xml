@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Epam\DI\Api\AdminhtmlServiceInterface" type="Epam\DI\Model\AdminhtmlService" />
+    <type name="Epam\DI\Api\AdminhtmlServiceInterface">
+        <arguments>
+            <argument name="adminhtmlNumber" xsi:type="number">678</argument>
+            <argument name="adminhtmlArray" xsi:type="array">
+                <item name="adminhtml-item1" xsi:type="string">Back Item 1 from adminhtml</item>
+                <item name="adminhtml-item2" xsi:type="string">Back Item 2 from adminhtml</item>
+                <item name="adminhtml-item3" xsi:type="string">Back Item 3 from adminhtml</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

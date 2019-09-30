@@ -20,10 +20,10 @@ class Raw extends Action
     public function execute()
     {
         // Set default parameters.
-        $width  = 400;
+        $width = 400;
         $height = 200;
 
-        $resultRaw  = $this->resultFactory->create(ResultFactory::TYPE_RAW);
+        $resultRaw = $this->resultFactory->create(ResultFactory::TYPE_RAW);
         $parameters = $this->getRequest()->getParams();
 
         // Check if parameters are correct.
@@ -35,7 +35,7 @@ class Raw extends Action
         }
 
         $resultRaw->setHeader('Content-type', 'image/jpeg')
-          ->setContents(file_get_contents('http://lorempixel.com/' . $width . '/' . $height . '/'));
+            ->setContents(file_get_contents('http://lorempixel.com/' . $width . '/' . $height . '/'));
         return $resultRaw;
     }
 

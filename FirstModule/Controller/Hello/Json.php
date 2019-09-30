@@ -4,34 +4,15 @@ declare(strict_types=1);
 namespace Epam\FirstModule\Controller\Hello;
 
 use Magento\Framework\App\Action\Action;
-use Magento\Framework\App\Action\Context;
 use Magento\Framework\App\ResponseInterface;
-use Magento\Framework\Controller\Result\JsonFactory;
 use Magento\Framework\Controller\ResultInterface;
+use Magento\Framework\Controller\ResultFactory;
 
 /**
  * Class Json
  */
 class Json extends Action
 {
-
-    /**
-     * @var JsonFactory
-     */
-    private $jsonResultFactory;
-
-    /**
-     * @param   Context      $context
-     * @param   JsonFactory  $jsonResultFactory
-     */
-    public function __construct(
-      Context $context,
-      JsonFactory $jsonResultFactory
-    ) {
-        parent::__construct($context);
-
-        $this->jsonResultFactory = $jsonResultFactory;
-    }
 
     /**
      * @return ResponseInterface|Json|ResultInterface
@@ -43,13 +24,13 @@ class Json extends Action
 
         // Array with some values (is going to be used as 'params' in JSON).
         $params = [
-          'orange',
-          '1new',
-          'town',
-          '6cats',
+            'orange',
+            '1new',
+            'town',
+            '6cats',
         ];
 
-        $result     = $this->jsonResultFactory->create();
+        $result = $this->resultFactory->create(ResultFactory::TYPE_JSON);
         $parameters = $this->getRequest()->getParams();
 
         // Array will be processed if parameter 'mode' is correctly defined in URL.
@@ -64,8 +45,8 @@ class Json extends Action
         }
 
         $result->setData([
-          'mode'   => $mode,
-          'params' => $params,
+            'mode' => $mode,
+            'params' => $params,
         ]);
         return $result;
     }

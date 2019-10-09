@@ -12,6 +12,9 @@ class InstallData implements InstallDataInterface
 
     const TABLE_NAME = 'magento2_first_table';
 
+    /**
+     * @inheritDoc
+     */
     public function install(
       ModuleDataSetupInterface $setup,
       ModuleContextInterface $context

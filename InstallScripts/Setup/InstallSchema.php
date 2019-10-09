@@ -15,7 +15,6 @@ class InstallSchema implements InstallSchemaInterface
 
     /**
      * @inheritDoc
-     * @throws \Zend_Db_Exception
      */
     public function install(
       SchemaSetupInterface $setup,

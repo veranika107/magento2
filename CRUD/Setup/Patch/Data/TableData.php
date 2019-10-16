@@ -18,6 +18,9 @@ class TableData implements DataPatchInterface
      */
     private $moduleDataSetup;
 
+    /**
+     * @param ModuleDataSetupInterface $moduleDataSetup
+     */
     public function __construct(ModuleDataSetupInterface $moduleDataSetup)
     {
         $this->moduleDataSetup = $moduleDataSetup;

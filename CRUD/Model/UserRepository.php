@@ -43,6 +43,13 @@ class UserRepository implements UserRepositoryInterface
      */
     private $collectionProcessor;
 
+    /**
+     * @param UserFactory $objectFactory
+     * @param UserResource $objectResourceModel
+     * @param CollectionFactory $collectionFactory
+     * @param SearchResultsInterfaceFactory $searchResultsFactory
+     * @param CollectionProcessorInterface $collectionProcessor
+     */
     public function __construct(
         UserFactory $objectFactory,
         UserResource $objectResourceModel,

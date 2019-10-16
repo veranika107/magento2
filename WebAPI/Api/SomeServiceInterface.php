@@ -7,7 +7,7 @@ interface SomeServiceInterface
 
     /**
      * @param string $test
-     * @return mixed
+     * @return string
      */
     public function someFunction(string $test);
 }

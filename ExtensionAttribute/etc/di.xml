@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Epam\ExtensionAttribute\Api\Data\ProductInformationInterface"
+                type="Epam\ExtensionAttribute\Model\ProductInformation"/>
+
+    <type name="Magento\Catalog\Model\ProductRepository">
+        <plugin name="SetProductInformation"
+                type="Epam\ExtensionAttribute\Plugin\Magento\Catalog\Model\ProductRepository"/>
+    </type>
+</config>
